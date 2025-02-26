@@ -1,13 +1,13 @@
 class Solution:
     def productExceptSelf(self, nums: list[int]) -> list[int]:
         ans = []
-        for i in range(len(nums)-1):
+        for i in range(0, len(nums)):
             product=1
-            for j in range(len(nums)-1):
+            for j in range(0, len(nums)):
                 if(i!=j):
                     product*=nums[j]
-                print(i, j, product)
-            ans[i] = product
+                print(i, j, product, ans)
+            ans.insert(i,product)
         
         return ans
         
